@@ -1,3 +1,7 @@
+if(process.env.NODE_ENV!="production"){
+    require('dotenv').config();
+}
+
 const express = require("express");
 const app = express();
 const path = require('path');
@@ -15,6 +19,7 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const {isLoggedIn} = require("./middleware.js");
 const userRouter = require("./routes/user.js");
+const dbURL = process.env.ATLASDB_URL;
 
 app.set("view engine","ejs");
 app.engine("ejs",ejsMate);
@@ -73,7 +78,7 @@ main().catch(err => console.log(err));
 
 async function main() {
 //   await mongoose.connect('mongodb://127.0.0.1:27017/moviesDatabase');
-  await mongoose.connect('mongodb+srv://ashishrana1805:iknh7A07Yc1Z7yyw@cluster0.kuxpgui.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+  await mongoose.connect(dbURL);
 }
 
 const movieData = new mongoose.Schema({
@@ -114,7 +119,7 @@ const Movie = mongoose.model("Movie",movieData);
 // Movie.insertMany(mov);
 
 const store = MongoStore.create({
-    mongoUrl: 'mongodb+srv://ashishrana1805:iknh7A07Yc1Z7yyw@cluster0.kuxpgui.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+    mongoUrl: dbURL,
     crypto:{
         secret:"keyboard"
     },
@@ -125,7 +130,7 @@ store.on("error",()=>{
 })
 
 app.use(session({
-        store,
+        // store:store,
         secret:"keyboard",
         resave:false,
         saveUninitialized:true,
@@ -163,6 +168,7 @@ app.get("/",(req,res,next)=>{
 
 // home route
 app.get("/movies",async (req,res,next)=>{
+    console.log(dbURL);
     console.log("successful request");
     try{
         let movies;
