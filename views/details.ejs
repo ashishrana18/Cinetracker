@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" href="/css/details.css">
+</head>
+
+<% layout("layouts/boilerplate") %>
+<div class="body">
+    <!-- <header>
+        <h1><b>Movie Details</b></h1>
+    </header> -->
+    <section>
+        <img src="<%=movie.src%>" alt="Movie Poster"> <!-- Replace with your movie poster image URL -->
+        <h1><b><%=movie.name%></b></h1>
+        <h2><b>Directed by: <%=movie.director%></b></h2>
+        <p><b><strong>Year watched: </strong><%=movie.selectedYear%></b></p>
+        <p><b><strong>Genre : </strong><%=movie.genre%></b></p>
+        <p><strong>Rating : </strong><%=movie.rating%></p>
+        <p><strong>Description : </strong><%=movie.description%></p>
+    </section>
+</div>

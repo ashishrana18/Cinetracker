@@ -1,0 +1,79 @@
+.heading {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    text-align: center;
+    background: linear-gradient(to right, #0d1b2a, #22333b);
+  }
+  h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    flex: 1;
+  }
+  .fas.fa-plus {
+    font-size: 24px;
+    color: #ffcc00;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+a{
+    text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-section {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-icon, .menu-icon {
+  display: flex;
+  margin: -2px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 20px; /* Make it pill-shaped */
+  padding: 8px;
+  margin-right: 5px; /* Add some spacing between icons */
+}
+
+.fa-user{
+  margin-top: 0.35rem;
+  margin-left: 0.3rem;
+  margin-right: 0.6rem;
+}
+
+.user-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 150px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.user-menu a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 5px;
+  padding: 8px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.user-menu a:hover {
+  background-color: #ff1900f1;
+  color: #fff;
+}

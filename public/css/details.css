@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    url("/css/images/Your wallpaper.jpg");
+  backdrop-filter: blur(1px);
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Text color */
+}
+
+header {
+  background-color: rgba(67, 120, 129, 0.2);
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+section {
+  max-width: 800px;
+  margin: 100px auto 20px; /* Adjust margin-top as needed */
+  padding: 20px;
+  border-bottom: 3px solid rgba(110, 236, 203, 0.4);
+  border-left: 3px solid rgba(110, 236, 203, 0.4);
+  background-color: rgba( 67,120,129,0.2);
+  border-radius: 80px;
+  backdrop-filter: blur(2px);
+  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); */
+}
+
+img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto 20px;
+  display: block;
+  filter: brightness(80%);
+  backdrop-filter: blur(10px);
+}
+
+h1,
+h2 {
+  color: #ffcc00;
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+}

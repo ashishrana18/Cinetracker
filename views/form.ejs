@@ -1,0 +1,59 @@
+<head>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+
+
+<% layout("layouts/boilerplate") %>
+<div class="body">
+    <h1>Add movie details</h1>
+    <div class="container mt-5">
+        <!-- name of movie -->
+        <form action="/movies" method="post" class="needs-validation" novalidate>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control dark-input" name="name" placeholder="Movie-name" aria-label="Username" required>
+                <span class="input-group-text dark-label dark-input">@</span>
+                <input type="text" class="form-control dark-input" name="director" placeholder="Directed by" aria-label="Server">
+            </div>
+
+            <div class="custom">
+                <!-- rating slider -->
+                <div class="form-group">
+                    <label for="customRange3" class="form-label slider">Rating</label>
+                    <input type="range" class="form-range slider" min="0" max="5" step="0.1" id="customRange3" name="rating" oninput="updateValue('customRange3')">
+                    <p id="rangeValue">Selected Value: <span id="customRange3rana">2.5</span></p>
+                </div>
+
+                <!-- year selector -->
+                <div class="form-group">
+                    <label for="yearSelector" class="">Year you watched this movie:</label>
+                    <select id="yearSelector" name="selectedYear"></select>
+                </div>
+            </div>
+
+            <div class="custom">
+                <!-- image source -->
+                <div class="input-group-sm">
+                    <span class="input-group-text dark-label dark-input" id="inputGroup-sizing-sm">Image</span>
+                    <input type="text" class="form-control dark-input" name="src" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Enter image source from the internet (prefer HD image)" required>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="genre" class="form-control dark-input" name="genre" placeholder="Genre" aria-label="First name" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- for description  -->
+            <div class="input-group">
+                <span class="input-group-text dark-label dark-input">Description</span>
+                <textarea class="form-control dark-input" name="description" aria-label="With textarea" required></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="/js/form.js"></script>
+</div>

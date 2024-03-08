@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: url("/css/images/forest.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 100px auto; /* Adjust margin-top as needed */
+  background-color: rgba(41, 48, 26, 0.2);
+  border-radius: 10px;
+  padding: 30px;
+  backdrop-filter: blur(2px);
+  border-radius: 50px;
+  border-top: 3px solid rgba(163, 177, 138, 0.4);
+  border-left: 3px solid rgba(163, 177, 138, 0.4);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 100px;
+  padding: 20px;
+  color: #ffcc00; /* Set heading color to gold */
+}
+
+h4 {
+  color: #ffcc00; /* Set movie name color to gold */
+}
+
+p {
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-label.slider {
+  color: #ffcc00;
+}
+
+.input-group-text {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+}
+
+textarea.form-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  resize: none;
+}
+
+button.btn-primary {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.btn-primary:hover {
+  background-color: #e65c00;
+}
