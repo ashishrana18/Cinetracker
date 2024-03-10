@@ -131,7 +131,7 @@ store.on("error",()=>{
 })
 
 app.use(session({
-        // store:store,
+        store:store,
         secret:"keyboard",
         resave:false,
         saveUninitialized:true,
